@@ -33,7 +33,7 @@ def subtr(index): # вычитание
     new_list.pop(index)
     return new_list
 
-# а тут цикл с вычилением; гоняет список по функциям сверху пока не придёт к ответу
+# а тут цикл с вычиcлением; гоняет список по функциям сверху пока не придёт к ответу
 while len(new_list) != 1: 
     for index, item in enumerate(new_list):
         if item == '*':
