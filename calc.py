@@ -47,5 +47,4 @@ while len(new_list) != 1:
         if '-' in new_list:
             a = new_list.index('-')
             new_list = subtr(a, new_list)
-    print(new_list)
 print('{0:g}'.format(new_list[0])) #это чтобы .0 отбрасывать в конце чисел
