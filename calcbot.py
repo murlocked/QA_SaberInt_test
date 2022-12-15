@@ -13,7 +13,7 @@ def handler(event,context):
 def calc(new_str):
     new_str = str(new_str)
     new_list = []
-    steps = []
+    steps = [] # сюда буду записывать последовательность действий
     pos = 0
     for index, item in enumerate(new_str): # тут я разбиваю выражение на список из чисел и знаков e.g. ['14', '/', '2']
         if item == 'x' or item == 'х':
@@ -55,16 +55,16 @@ def calc(new_str):
         for index, step in enumerate(steps):
             a = new_list.index(step)
             if step == '*':
-                new_list = mult(a, new_list)
+                new_list = mult(a)
                 steps.pop(index)
             if step == '/':
-                new_list = div(a, new_list)
+                new_list = div(a)
                 steps.pop(index)
             if '*' not in steps and '/' not in steps:
                 if step == '+':
-                    new_list = add(a, new_list)
+                    new_list = add(a)
                 if step == '-':
-                    new_list = subtr(a, new_list)
+                    new_list = subtr(a)
         
     return '{0:g}'.format(new_list[0]) #это чтобы .0 отбрасывать в конце чисел
 
