@@ -2,6 +2,8 @@ new_str = input()
 new_list = []
 pos = 0
 for index, item in enumerate(new_str): # тут я разбиваю выражение на список из чисел и знаков e.g. ['14', '/', '2']
+    if item == 'x' or item == 'х':
+        item = '*'
     if item == '*' or item == '/' or item == '+' or item == '-':
         new_list.append(new_str[pos:index])
         new_list.append(item)
